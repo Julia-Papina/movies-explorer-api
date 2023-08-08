@@ -24,6 +24,6 @@
 IP-адрес 158.160.99.66
 
 
-Backend 
+Backend https://api.papina-movies.nomoreparties.co
 
 
