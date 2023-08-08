@@ -9,12 +9,6 @@ const UnauthorizedError = require('../errors/UnauthorizedError');
 
 const { JWT_SECRET, NODE_ENV } = process.env;
 
-const getUsers = (req, res, next) => {
-  User.find({})
-    .then((users) => res.status(200).send(users))
-    .catch(next);
-};
-
 const createUser = (req, res, next) => {
   bcript.hash(String(req.body.password), 10)
     .then((hashedPassword) => {
@@ -120,7 +114,6 @@ module.exports = {
   getInfoMe,
   updateProfile,
   createUser,
-  getUsers,
   login,
   logout,
 };
