@@ -101,13 +101,13 @@ const updateProfile = (req, res, next) => {
     });
 };
 
-const logout = (req, res) => {
+const signout = (req, res) => {
   res.clearCookie('jwt', {
     maxAge: 24 * 3600000,
     sameSite: true,
     httpOnly: true,
   });
-  res.send({ message: 'logout' });
+  res.send({ message: 'Выход' });
 };
 
 module.exports = {
@@ -115,5 +115,5 @@ module.exports = {
   updateProfile,
   createUser,
   login,
-  logout,
+  signout,
 };
