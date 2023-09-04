@@ -43,7 +43,7 @@ const login = (req, res, next) => {
               _id: user._id,
             }, NODE_ENV === 'production' ? JWT_SECRET : 'dev-secret');
             res.cookie('jwt', jwt, {
-              maxAge: 360000,
+              maxAge: 3600000 * 24 * 7,
               httpOnly: true,
               // sameSite: true,
               // httpOnly: false,
