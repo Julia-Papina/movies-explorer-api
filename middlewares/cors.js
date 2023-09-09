@@ -7,6 +7,7 @@ const allowedCors = [
   'http://api.papina-movies.nomoreparties.co',
   'https://papina-movies.nomoreparties.co',
   'https://api.papina-movies.nomoreparties.co',
+  'https://api.nomoreparties.co/beatfilm-movies',
 ];
 
 const cors = (req, res, next) => {
